@@ -1,0 +1,280 @@
+h1{
+  font-family: var(--font-family);
+  font-size: 26px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  color: #202020;
+  background: #202020;
+  background: linear-gradient(135deg, #202020 0, #707070 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2,h3,h4{
+  font-family: var(--font-family);
+  font-size: 22px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  color: #a28100;
+  background: #a28100;
+  background: linear-gradient(135deg, #a28100 0, #484848 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h5,h6{
+  font-family: var(--font-family);
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  color: #a28100;
+  background: #a28100;
+  background: linear-gradient(135deg, #a28100 0, #484848 50%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+ol{
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  counter-reset: li;
+
+  li{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-left: 20px;
+    grid-gap: 10px;
+    
+
+    &::before{
+      position: absolute;
+      left: 0;
+      top: -4.5px;
+      content: counters(li, '') '.';
+      counter-increment: li;
+      font-size: clamp(15px, 1.2546vw, 17px);
+      font-family: var(--font-family);
+      font-weight: 700;
+      color: rgba(var(--cl-b),1.0);
+    }
+  }
+}
+
+ul:not([class]) {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  background: #fff;
+  position: relative;
+  padding: 15px 30px;
+  box-shadow: 0 0 18px rgb(0 0 0 / 10%);
+  border-radius: 10px;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    grid-gap: 5px;
+    padding-left: 30px;
+
+    p{
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    &::before{
+      content: "";
+      left: 0;
+      position: absolute;
+      top: 4px;
+      width: 16px;
+      height: 16px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3C!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%231f9900' d='M256 512a256 256 0 1 0 0-512 256 256 0 1 0 0 512zm113-303L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z'/%3E%3C/svg%3E");
+    }
+  }
+}
+
+table:not([class]) {
+  width: 100%;
+  // box-shadow: 0 0 0 1px rgba(37, 41, 46, 0.9), 0 2px 0 0 rgba(37, 41, 46, 0.75),
+  //   0 -2px 0 0 rgba(37, 41, 46, 0.75);
+  // border: 1px solid var(--br-d);
+  // position: relative;
+  // border-spacing: 0;
+
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 0 18px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    border-collapse:collapse;
+    border-color: #fff;
+
+  @include small-tablet{
+    overflow-x: scroll;
+    display: table-column-group;
+
+    & > *{
+      white-space: nowrap;
+    }
+    
+    td{
+      min-width: 185px;
+      white-space: normal !important;
+    }
+  }
+
+  th {
+    font-family: var(--font-family);
+    font-weight: 400;
+    line-height: 1.7;
+    color: #3c3c3c;
+    padding: 10px 15px;
+    border: none;
+    border-top: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    font-size: 15px;
+    text-align: start;
+  }
+
+  tr:nth-child(odd):not(thead tr) {
+    background: #fafafa;
+  }
+   
+  thead{
+    tr{
+    padding: 10px 10px 0;
+    }
+  }
+
+  tbody{
+    padding: 10px 10px 0;
+    tr{
+      padding: 10px 10px 0;
+    }
+  }
+
+  td {
+    font-family: var(--font-family);
+    font-weight: 400;
+    line-height: 1.7;
+    color: #3c3c3c;
+    padding: 10px 15px;
+    font-size: 15px;
+  
+    // border: solid 1px var(--br-e);
+    position: relative;
+    z-index: 1;
+    
+    &::before{
+      position: absolute;
+      content: '';
+      background-color: #fff;
+      width: 10px;
+      height: 100%;
+      z-index: 5;
+      left: 0;
+      top: 0;
+    }
+
+    &:last-child{
+      &::before{
+        left: initial;
+        right: 0;
+      }
+    }
+  }
+}
+
+.h2o-stars{
+  display: flex;
+  align-items: center;
+  grid-gap: 4px;
+}
+
+.h2o-grade{
+    color: #444444;
+    font-size: 10px;
+    display: block;
+    padding: 0 10px;
+    height: 20px;
+    background: #fff6d4;
+    line-height: 2.0;
+    border-radius: 4px;
+    width: fit-content;
+}
+
+blockquote{
+  margin: 0;
+  color: #231E28;
+  padding: 15px 15px 15px 55px;
+  position: relative;
+  background: rgba(var(--bg-a),1.0);
+  box-shadow: 0 0 18px rgb(0 0 0 / 10%);
+  font-weight: 300;
+  border-radius: 10px;
+
+  p{
+    font-style: italic;
+  }
+
+  &::before{
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--%3E%3Cpath fill='%23fc0' d='M0 216C0 149.7 53.7 96 120 96h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V216zm256 0c0-66.3 53.7-120 120-120h8c17.7 0 32 14.3 32 32s-14.3 32-32 32h-8c-30.9 0-56 25.1-56 56v8h64c35.3 0 64 28.7 64 64v64c0 35.3-28.7 64-64 64h-64c-35.3 0-64-28.7-64-64V216z'/%3E%3C/svg%3E");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: absolute;
+    left: 15px;
+    top: 20px;
+  }
+}
+
+.h2o-logo{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: rgba(var(--bg-c),1.0);
+  font-size: clamp(20px, 2.4074vw, 26px);
+  font-weight: 900;
+  text-transform: uppercase;
+
+  b{
+    font-weight: 900;
+    color: rgba(var(--cl-a),1.0);
+  }
+
+  &__label{
+    color: rgba(var(--bg-c),1.0);
+    display: block;
+    width: clamp(35px, 3.7037vw, 40px);
+    height: 27px;
+    font-size: 11px;
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 5px;
+    font-weight: 600;
+    line-height: 2.4;
+    background: rgba(var(--bg-k),1.0);
+    text-transform: none;
+  }
+}
+
+.h2o-list-icon{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  border: none;  
+  grid-gap: clamp(3px, .463vw, 5px);
+  width: 100%;
+}

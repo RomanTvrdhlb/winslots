@@ -1,0 +1,43 @@
+@mixin overlay {
+  position: fixed;
+  height: 100%;
+  right: 0;
+  top: var(--header-height);
+  bottom: 64px;
+  left: 0;
+  z-index: 30;
+  padding: 20px 20px;
+  overflow-y: scroll;
+
+  background: rgba(39, 50, 59, 0.8);
+  visibility: hidden;
+  opacity: 0;
+
+  transition: all 1s;
+  transition-delay: 0.5s;
+
+  pointer-events: none;
+
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &.active {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+
+    visibility: visible;
+    opacity: 1;
+
+    transition: all 0.6s;
+
+    pointer-events: initial;
+  }
+}
+
+.h2o-overlay {
+  @include overlay;
+}

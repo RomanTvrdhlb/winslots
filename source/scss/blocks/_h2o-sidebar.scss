@@ -1,0 +1,211 @@
+.h2o-sidebar{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 6px;
+
+    @include tablet{
+        padding-bottom: clamp(40px, 4.7059vw, 60px);
+    }
+    
+    &__box{
+        @include for-tablet{
+            display: flex;
+            flex-direction: column;
+            grid-gap: 6px;
+        }
+
+        @include tablet{
+            display: grid;
+            grid-gap: 6px;
+
+            @include for-mobile{
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(2, clamp(70px, 7.0796vw, 80px)) 1fr;
+            }
+
+            
+            .h2o-sidebar-game{
+                @include for-mobile{
+                    grid-column: 1;
+                    grid-row: 1/4;
+                }
+                .h2o-main-button{
+                    max-width: 100%;
+                }
+            }
+
+            .h2o-bonus-card{
+               &__bottom{
+                flex-grow: 1;
+                justify-content: flex-end;
+               }
+            }
+        }
+
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__wrapp{
+        @include for-tablet{
+            display: flex;
+            flex-direction: column;
+            grid-gap: 6px;
+        }
+
+        @include tablet{
+            display: grid;
+            grid-gap: 6px;
+
+            @include for-small-tablet{
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            
+            .h2o-tournament{
+                @include for-small-tablet{
+                    grid-column: 1;
+                    .h2o-main-button{
+                        max-width: 100%;
+                    }
+                }
+               
+            }
+        }
+
+        @include small-tablet{
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__top{
+        border-radius: 6px;
+        padding: 14px 30px;
+        background: url(../img/index/bg2.png) 50% 0 repeat #000;
+        position: relative;
+        border: 2px solid var(--br-c);
+        box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.05), 0 0 0 1px #171e27;
+        background-size: 16px;
+        overflow: hidden;
+        margin-bottom: 1px;
+
+        @include tablet{
+            .h2o-main-button{
+                max-width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    &__bonus{
+        position: relative;
+       
+        z-index: 1; 
+        display: flex;
+        flex-direction: column;
+        border-radius: 6px;
+        padding: 24px 30px 30px;
+        background: url(../img/index/bg2.png) 50% 0 repeat #000;
+        position: relative;
+        border: 2px solid var(--br-c);
+        box-shadow: inset 0 0 0 1px hsla(0,0%,100%,.05), 0 0 0 1px #171e27;
+        background-size: 16px;
+        overflow: hidden;
+
+        @include for-tablet{
+            min-height: 200px;
+        }
+
+        @include tablet{
+            .h2o-title{
+                flex-grow: 1;
+            }
+        }
+
+        &:hover{
+            .h2o-sidebar__bonus-image img{
+                opacity: .5;
+            }
+        }
+
+        &-btn{
+            z-index: 4;
+            position: absolute;
+            inset: 0;
+        }
+
+        &-image{
+            background: rgba(var(--bg-b),1.0);
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            pointer-events: none;
+           
+
+            img,picture{
+                transition: opacity .15s ease-in-out .2s;
+                opacity: .4;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        .h2o-white-button{
+            align-self: flex-end;
+            margin-top: 35px;
+            z-index: 5;
+        }
+    }
+
+    &__input{
+        box-sizing: border-box;
+        width: 100%;
+        height: 80px;
+        padding-left: 69px;
+        font-size: 16px;
+        color: rgba(var(--cl-a),1.0);
+        border-radius: 6px;
+
+        &::placeholder{
+            color: rgba(var(--cl-a),.6);
+        }
+    }
+
+    &__search{
+        width: 100%;
+        background: #000;
+        height: 80px;
+        border-radius: 4px;
+        transition: all .2s;
+        z-index: 3;
+        position: relative;
+
+        @include tablet{
+            height: clamp(70px, 7.0796vw, 80px);
+        }
+
+        &::before{
+            position: absolute;
+            content: '';
+            inset: -1px;
+            border: 1px solid rgba(var(--cl-a),.1);
+            z-index: 0;
+            border-radius: inherit;
+            pointer-events: none;
+        }
+
+        
+       
+
+        &-btn{
+            position: absolute;
+            display: block;
+            top: 50%;
+            left: 20px;
+            transform: translateY(-50%);
+            z-index: 3;
+        }
+   
+    }
+}

@@ -1,0 +1,11 @@
+.h2o-rating-list{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(20px, 2.7778vw, 30px);
+    counter-reset: list;
+    &__item{
+        counter-increment: list;
+        box-shadow: 0 0 18px rgb(0 0 0 / 10%);
+        border-radius: 10px;
+    }
+}

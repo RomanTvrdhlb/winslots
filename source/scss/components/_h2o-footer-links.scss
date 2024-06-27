@@ -1,0 +1,13 @@
+.h2o-footer-links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+
+    &__item{
+        display: flex;
+        align-items: center;
+        width: fit-content;
+    }
+}

@@ -1,0 +1,21 @@
+.h2o-games-section{
+    overflow: hidden;
+    
+    @include for-small-tablet{
+        padding-bottom: 70px;
+    }
+
+    @include small-tablet{
+        padding-bottom: 50px;
+    }
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 30px;
+
+        .h2o-main-button{
+            width: fit-content;
+            align-self: center;
+        }
+    }
+}

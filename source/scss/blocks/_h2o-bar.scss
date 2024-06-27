@@ -1,0 +1,43 @@
+.h2o-bar{
+    @include for-tablet{
+        display: none;
+    }
+    z-index: 50;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 8px;
+    background-color: rgba(var(--bg-g),1.0);
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    height: 64px;
+
+    @include for-mobile{
+        justify-content: space-evenly;
+    }
+
+    @include mobile{
+        justify-content: space-between;
+    }
+    
+  .h2o-burger {
+    @include burger;
+    @include for-mobile{
+        position: absolute;
+        right: 2.5%;
+    }
+  }
+
+  .h2o-main-nav{
+    grid-gap: 5px;
+    &__link{
+        @include mobile{
+            padding: 5px 10px;
+            font-size: 14px;
+            min-height: 40px;
+        }
+    }
+  }
+}

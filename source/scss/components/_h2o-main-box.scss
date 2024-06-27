@@ -1,0 +1,30 @@
+.h2o-main-box{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 24px;
+
+    
+    img{
+      display: flex;
+      align-self: center;
+    }
+
+    button{
+      color: rgba(var(--cl-l),1.0);
+      text-decoration: underline;
+      font-family: var(--font-family);
+      font-size: 14px;
+      line-height: 110%;
+      font-weight: 700;
+      transition: all .3s;
+      text-underline-offset: 3px;
+  
+      &:hover{
+        color: rgba(var(--cl-l),.7);
+      }
+    }
+
+    &--mode{
+      grid-gap: 18px;
+    }
+}

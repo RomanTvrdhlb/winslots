@@ -1,0 +1,43 @@
+.h2o-header {
+  width: 100%;
+  padding: 10px 0;
+  position: absolute;
+  top: 0;
+  z-index: 80;
+  
+
+  &__box {
+    
+    display: grid;
+    align-items: center;
+    position: relative;
+    grid-template-columns: 1fr auto;
+
+    .h2o-main-nav{
+      margin-top: 20px;
+    }
+
+    @include for-tablet{
+      padding: 10px 0 0;
+    }
+
+    @include tablet {
+      grid-template-columns: auto 1fr;
+      justify-items: end;
+
+      .h2o-main-nav {
+        display: none;
+      }
+
+      @include for-mobile{
+        padding: 10px 0 ;
+      }
+    }
+  }
+
+  .h2o-burger {
+    @include tablet{
+      @include burger;
+    }
+  }
+}

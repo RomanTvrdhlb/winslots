@@ -1,0 +1,45 @@
+.h2o-slots-slider{
+
+    &__box{
+        display: flex;
+    }
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        display: flex;
+    }
+
+    .splide{
+        &__pagination{
+            position: static;
+            padding: 25px 0 15px;
+            
+            &__page{
+                height: 8px;
+                background: rgba(var(--bg-d),1.0);
+                border-radius: 5px;
+                margin: 5px;
+                display: flex;
+                border: initial !important;
+                opacity: 1;
+                transform: scale(1);
+                background: rgba(var(--bg-a),.54);
+                border: solid 2px rgba(0, 0, 0, 0.8);
+
+                &.is-active{
+                    background:rgba(var(--bg-c),1.0);
+                }
+
+                @include for-small-tablet{
+                    width: 40px;
+                }
+
+                @include mobile{
+                    width: 30px;
+                }
+            }
+        }
+     
+    }
+}

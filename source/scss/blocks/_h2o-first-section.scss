@@ -1,0 +1,11 @@
+.h2o-first-section {
+  background: var(--gr-b);
+  position: relative;
+  padding:calc(var(--header-height) + 10px) 0 50px;
+  
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 24px;
+  }
+}

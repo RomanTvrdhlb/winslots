@@ -1,0 +1,96 @@
+.h2o-aside-menu{
+    z-index: 90;
+    position: fixed;
+    top: var(--header-height);
+    left: 0;
+    width: 100%;
+    max-width: 48px;
+    padding: 10px 0;
+    transition: all .4s;
+    background-color: rgba(var(--bg-i),1.0);
+    height: calc(100vh - var(--header-height));
+    display: flex;
+    flex-direction: column;
+    grid-gap: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    @include for-notebook{
+        top: 0;
+        height: 100vh;
+        background-color: rgba(var(--bg-j),1.0);
+    }
+
+    &.active{
+        max-width: 230px;
+        padding: 10px;
+        overflow-y: auto;
+        .h2o-logo-aside{
+            display: flex;
+        }
+        .panel, [data-content]{
+            transition: max-height 0.2s;
+        }
+    }
+    .panel, [data-content]{
+        transition: 0s;
+    }
+    .h2o-logo-aside{
+        display: none;
+    }
+
+    &__btn{
+        display: flex;
+        position: relative;
+        z-index: 20;
+        padding-left:14px;
+        transition: transform .3s linear, filter .1s linear;
+      
+        &:hover{
+          filter: grayscale(100%) brightness(10);
+          transform: scale(1.1);
+        }
+      
+        &.active{
+          padding: 0;
+          transform: scaleX(-1);
+        }
+    }
+
+    &__top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        grid-gap: 10px;
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 25px;      
+    }
+
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 5px;
+    }
+
+    &__social{
+        background: rgba(var(--bg-h),1.0);
+        border-radius: 4px;
+        transition: all 0.3s linear;
+        width: 30px;
+        height: 30px;
+        align-self: center;
+
+        &:hover{
+            background-color: rgba(var(--bg-e),1.0);
+        }
+    }
+    @include tablet{
+      display: none;    
+    }
+}

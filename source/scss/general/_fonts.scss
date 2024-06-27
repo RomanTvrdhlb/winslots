@@ -1,0 +1,20 @@
+@mixin font-face($font-family, $url, $weight, $style) {
+  @font-face {
+    font-style: $style;
+    font-weight: #{$weight};
+    font-family: "#{$font-family}";
+
+    font-display: swap;
+    src: url("../fonts/#{$url}.woff2") format("woff2"),
+    url("../fonts/#{$url}.woff") format("woff");
+  }
+}
+
+@include font-face("Exo2", "exo2-light", 300, normal);
+@include font-face("Exo2", "exo2-regular", 400, normal);
+@include font-face("Exo2", "exo2-medium", 500, normal);
+@include font-face("Exo2", "exo2-bold", 700, normal);
+@include font-face("Exo2", "exo2-extrabold", 800, normal);
+@include font-face("Exo2", "exo2-black", 900, normal);
+
+

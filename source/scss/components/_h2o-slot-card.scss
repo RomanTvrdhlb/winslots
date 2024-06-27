@@ -1,0 +1,65 @@
+.h2o-slot-card{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    height: 465px;
+    padding: 45px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+    background: rgba(var(--bg-a),.01);
+
+    &__image{
+        width: 130px;
+        height: 130px;
+        box-shadow: 0 4px 0 #ffcc00;
+        border-radius: 50%;
+        margin: 0 auto;
+
+        img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+    }
+
+    &__bottom{
+        justify-content: flex-end;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 20px;
+    }
+
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+    }
+
+    &::before{
+        position: absolute;
+        content: '';
+        width: 100%;
+        height: 1px;
+        top: 0;
+        left: 0;
+        background: var(--gr-a);
+        pointer-events: none;
+    }
+
+    &__title{
+        color: #fff;
+        font-size: 18px;
+        font-weight: 600;
+        width: 100%;
+        padding: 5px 0 0;
+        text-transform: uppercase;
+    }
+
+    p{
+        color: #747474;
+        font-size: 14px;
+    }
+}

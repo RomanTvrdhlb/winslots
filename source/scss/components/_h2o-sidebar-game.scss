@@ -1,0 +1,99 @@
+.h2o-sidebar-game {
+  border-radius: 6px;
+  padding: 24px 30px 30px;
+  background: url(../img/index/bg2.png) 50% 0 repeat #000;
+  position: relative;
+  border: 2px solid #000;
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 100%, 0.05), 0 0 0 1px #171e27;
+  background-size: 16px;
+  overflow: hidden;
+
+  min-height: 526px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 5;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #000, #030c16 25%, #0f4177);
+    z-index: -1;
+  }
+
+  &__image {
+    position: absolute;
+    top: 12%;
+    right: 12px;
+  }
+
+  &__girl {
+    width: 134px;
+    height: 366px;
+    z-index: 1;
+    
+    &--mode {
+      z-index: 2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      animation-name: blinkNeon;
+      animation-duration: 4s;
+      animation-timing-function: step-end;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &__bg {
+    display: flex;
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+
+  &__inner {
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 6px;
+
+    .h2o-main-button {
+      margin-top: 15px;
+      font-size: 16px;
+    }
+  }
+
+  &__subtitle {
+    color: rgba(var(--cl-a), 1);
+    font-style: normal;
+    font-size: clamp(16px, 1.7699vw, 20px);
+    line-height: 130%;
+    font-weight: 500;
+    font-family: var(--font-family);
+  }
+
+  p {
+    font-size: 12px;
+  }
+}
+
+@keyframes blinkNeon {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}

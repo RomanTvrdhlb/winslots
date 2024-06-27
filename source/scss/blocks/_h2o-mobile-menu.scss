@@ -1,0 +1,39 @@
+.h2o-mobile-menu{
+    position: fixed;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 35px;
+    transform: translateX(-230%);
+    transition: all .4s;
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto;
+    top: var(--header-height);
+    padding: 15px 20px 15px;
+    z-index: 30;
+    padding-top: 32%;
+   
+    &.active {
+        transform: translateX(0);
+    }
+
+    .h2o-main-nav{
+        flex-direction: column;
+
+        @include for-mobile{
+            grid-gap: 20px;
+        }
+        @include mobile{
+            grid-gap: 10px;
+        }
+
+        &__link{
+            padding: 20px 15px;
+            justify-content: center;
+            min-width: 240px;
+            font-size: 22px;
+            border-radius: 0;
+        }
+    }
+}

@@ -1,0 +1,34 @@
+.h2o-jackpots-section{
+    position: relative;
+    padding-bottom: clamp(30px, 2.952vw, 40px);
+  
+    &__box {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      grid-gap: 24px;
+      grid-gap: 20px;
+      padding: 20px clamp(15px, 2.214vw, 30px) 30px;
+      background: var(--gr-d);
+      border-radius: 20px;
+    }
+  
+    &__top{
+      display: flex;
+      justify-content: space-between;
+      grid-gap: 20px 10px;
+  
+      @include for-small-tablet{
+        padding-right: clamp(90px, 8.8561vw, 120px);
+      }
+  
+      @include for-mobile{
+        align-items: center;
+      }
+  
+      @include mobile{
+        grid-gap: 15px;
+        flex-direction: column;
+      }
+    }
+}

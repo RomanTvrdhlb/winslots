@@ -1,0 +1,10 @@
+.h2o-favorite-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(235px ,1fr));
+    grid-gap: clamp(15px, 2.3148vw, 25px);
+    counter-reset: list;
+
+    &__item{
+        counter-increment: list;
+    }
+}
