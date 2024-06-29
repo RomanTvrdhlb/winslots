@@ -1,0 +1,52 @@
+.h2o-tips-list{
+    display: grid;
+    grid-gap: clamp(10px, 1.1111vw, 12px);
+    counter-reset: step;
+
+    @include for-small-tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include small-tablet{
+        grid-template-columns: 100%;
+    }
+
+    &__item{
+        background: var(--gr-d);
+        border-radius: 12px;
+        padding: clamp(15px, 1.8519vw, 20px) clamp(12px, 1.3889vw, 15px);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        grid-gap: 8px;
+        z-index: 1;
+        counter-increment: step;
+
+        &::before{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            transform: translate(5%, -50%);
+            color: rgba(var(--cl-a),.2);
+            z-index: -1;
+            display: block;
+            font-size: clamp(76px, 8.8889vw, 96px);
+            line-height: 27.5px;
+            letter-spacing: 3.1px;
+            font-weight: 700;
+            line-height: .4;
+            content: counter(step);
+        }
+    }
+
+    &__title{
+        color: rgba(var(--cl-a),1.0);
+        font-size: clamp(16px, 1.6667vw, 18px);
+        font-family: var(--font-family);
+        font-weight: 700;
+    }
+
+    p{
+        color: rgba(var(--cl-a),1.0);
+    }
+}

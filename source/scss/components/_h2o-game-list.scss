@@ -1,26 +1,37 @@
-.h2o-game-list{
-    display: grid;
-    grid-gap: 10px;
+.h2o-game-list {
+  display: grid;
+  grid-gap: 12px;
 
+  @include for-tablet {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
-    @include for-laptop{
-        grid-template-columns: repeat(6, 1fr);
+  @include tablet {
+    @include for-small-tablet {
+      grid-template-columns: repeat(3, 1fr);
     }
+  }
 
-    @include laptop{
-        @include for-tablet{
-            grid-template-columns: repeat(5, 1fr);
-        }
+  @include small-tablet {
+    @include for-mobile {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @include mobile {
+    grid-template-columns: 100%;
+  }
+
+  &--mode{
+    grid-gap: clamp(15px, 1.8519vw, 20px);
+    @include for-tablet {
+        grid-template-columns: repeat(3, 1fr);
     }
 
     @include tablet{
-        @include for-mobile{
-            grid-template-columns: repeat(3, 1fr);
-        }
+      @include for-mobile{
+      grid-template-columns: repeat(auto-fill, minmax(238px, 1fr));
+      }
     }
-
-    @include mobile{
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+  }
 }

@@ -1,0 +1,64 @@
+.h2o-game-aside{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    background-color: #171b1c;
+    border-radius: 5px;
+    padding: 14px;
+    height: fit-content;
+
+    &__image{
+        border-radius: 5px;
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+
+        img{
+            border-radius: inherit;
+            overflow: hidden;
+
+            @include mobile{
+                width: 100%;
+            }
+        }
+
+        @include small-tablet{
+            display: flex;
+            @include for-mobile{
+            justify-content: center;
+        }
+        
+    }
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item{
+        border-bottom: 1px solid var(--br-o);
+        margin-top: 0;
+        padding: 4px 0 4px 12px;
+        position: relative;
+        font-size: clamp(14px, 1.3889vw, 15px);
+        color: rgba(var(--cl-a),1.0);
+
+        &::before{
+            content: " ";
+            display: block;
+            height: 6px;
+            width: 6px;
+            border-radius: 3px;
+            position: absolute;
+            top: 12px;
+            left: 0;
+            background-color: rgba(var(--bg-a),1.0);
+        }
+    }
+
+    &__text{
+        color:  rgba(var(--cl-y),1.0);
+    }
+}

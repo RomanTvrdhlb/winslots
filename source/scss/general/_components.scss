@@ -5,13 +5,16 @@
 // ----------------- MAIN COMPONENTS -----------------
 
 // ----------------- BLOCK COMPONENTS -----------------
-// @import "components/h2o-game-card.scss";
+@import "components/h2o-game-card.scss";
 @import "components/h2o-slots-slider.scss";
 // @import "components/h2o-best-slider.scss";
 // @import "components/h2o-play-card.scss";
 // @import "components/h2o-bonus-card.scss";
 // @import "components/h2o-sidebar-game.scss";
 @import "components/h2o-accordion.scss";
+@import "components/h2o-step-list.scss";
+@import "components/h2o-info.scss";
+@import "components/h2o-info-box.scss";
 // ----------------- BLOCK COMPONENTS -----------------
 
 // ----------------- GRID COMPONENTS -----------------
@@ -22,7 +25,22 @@
 @import "components/h2o-rating-card.scss";
 @import "components/h2o-favorite-list.scss";
 @import "components/h2o-favorite-card.scss";
+@import "components/h2o-black-list.scss";
+@import "components/h2o-best-casino.scss";
+@import "components/h2o-tips-list.scss";
 // @import "components/h2o-game-nav.scss";
-// @import "components/h2o-game-list.scss";
+@import "components/h2o-game-list.scss";
 @import "components/h2o-footer-nav";
+@import "components/h2o-info-slider";
+@import "components/h2o-casino-card";
+@import "components/h2o-pay-slider";
+@import "components/h2o-best-list";
+@import "components/h2o-best-block";
+@import "components/h2o-casino-list";
+@import "components/h2o-casino-row";
+@import "components/h2o-rewiev-card";
+@import "components/h2o-gambling-operator";
+@import "components/h2o-demo-card";
+@import "components/h2o-demo-list";
+@import "components/h2o-nav";
 // ----------------- GRID COMPONENTS -----------------

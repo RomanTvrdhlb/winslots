@@ -1,0 +1,105 @@
+.h2o-casino-card {
+  background-color: rgba(27, 10, 127, 0.1);
+  border-radius: 16px;
+  padding: clamp(15px, 2.3148vw, 25px);
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+    
+  &__box {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+
+    .h2o-main-btn {
+      width: 100%;
+      border-radius: 10px;
+      min-height: 40px;
+    }
+  }
+
+  &__btn {
+    height: 100px;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    background-color: rgba(var(--bg-b), 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: calc(clamp(15px, 2.3148vw, 25px) * -1);
+    margin-right: calc(clamp(15px, 2.3148vw, 25px) * -1);
+    margin-top: calc(clamp(15px, 2.3148vw, 25px) * -1);
+    margin-bottom: 5px;
+    width: calc(100% + (clamp(15px, 2.3148vw, 25px) * 2));
+
+    &.yellow{
+        background-color:#f1de00;
+    }
+
+    &.blue{
+        background-color: rgba(var(--cl-w),1.0);
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: middle;
+      height: auto;
+      max-height: 80%;
+      max-width: 60%;
+    }
+  }
+
+  &__wrapp{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-gap: 25px;
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+  }
+
+  &__bonus {
+    background-color: rgba(var(--cl-w),.5);
+    border-radius: 12px;
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 13px;
+    font-weight: 600;
+    color: rgba(var(--cl-a), 0.5);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    b {
+      display: block;
+      font-size: 16px;
+      color: rgba(var(--cl-a), 1);
+      font-weight: 600;
+    }
+  }
+
+  .h2o-grade{
+    padding: 0;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: rgba(var(--cl-k),1);
+    font-weight: 600;
+
+    .h2o-icon-star{
+        margin-right: 5px;
+    }
+
+    b{
+        font-weight: 600;
+        color: rgba(var(--cl-k),.5);
+    }
+  }
+}

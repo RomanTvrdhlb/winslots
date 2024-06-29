@@ -1,6 +1,5 @@
 .h2o-icon {
-
-  &-play{
+  &-play {
     height: 28px;
     width: 15px;
     display: block;
@@ -10,7 +9,7 @@
     background-size: contain;
   }
 
-  &-search{
+  &-search {
     height: 16px;
     width: 16px;
     display: block;
@@ -20,9 +19,9 @@
     background-size: contain;
   }
 
-  &-bonus{
+  &-bonus {
     height: 16px;
-    width:  16px;
+    width: 16px;
     display: block;
     background-image: url(../img/sprite/bonus.svg);
     background-position: center center;
@@ -30,7 +29,7 @@
     background-size: contain;
   }
 
-  &-btc{
+  &-btc {
     height: 22px;
     width: 22px;
     display: block;
@@ -40,7 +39,7 @@
     background-size: contain;
   }
 
-  &-eth{
+  &-eth {
     height: 22px;
     width: 22px;
     display: block;
@@ -50,7 +49,7 @@
     background-size: contain;
   }
 
-  &-usdt{
+  &-usdt {
     height: 22px;
     width: 22px;
     display: block;
@@ -60,7 +59,7 @@
     background-size: contain;
   }
 
-  &-xrp{
+  &-xrp {
     height: 22px;
     width: 22px;
     display: block;
@@ -70,7 +69,7 @@
     background-size: contain;
   }
 
-  &-review{
+  &-review {
     height: 16px;
     width: 16px;
     display: block;
@@ -80,7 +79,7 @@
     background-size: contain;
   }
 
-  &-medal{
+  &-medal {
     height: clamp(30px, 3.7037vw, 40px);
     width: clamp(30px, 3.7037vw, 40px);
     display: block;
@@ -90,7 +89,7 @@
     background-size: contain;
   }
 
-  &-fire{
+  &-fire {
     height: clamp(30px, 3.7037vw, 40px);
     width: clamp(30px, 3.7037vw, 40px);
     display: block;
@@ -100,7 +99,7 @@
     background-size: contain;
   }
 
-  &-germany{
+  &-germany {
     height: clamp(30px, 3.7037vw, 40px);
     width: clamp(30px, 3.7037vw, 40px);
     display: block;
@@ -110,7 +109,7 @@
     background-size: contain;
   }
 
-  &-new{
+  &-new {
     height: clamp(30px, 3.7037vw, 40px);
     width: clamp(30px, 3.7037vw, 40px);
     display: block;
@@ -120,7 +119,7 @@
     background-size: contain;
   }
 
-  &-de{
+  &-de {
     height: 16px;
     width: 18px;
     display: block;
@@ -131,7 +130,7 @@
     border-radius: 6px;
   }
 
-  &-info{
+  &-info {
     height: 16px;
     width: 16px;
     display: block;
@@ -140,14 +139,14 @@
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 6px;
-    transition: all .2s;
+    transition: all 0.2s;
 
-    &:hover{
+    &:hover {
       transform: scale(1.05);
     }
   }
 
-  &-mob{
+  &-mob {
     height: 16px;
     width: 16px;
     display: block;
@@ -156,14 +155,14 @@
     background-repeat: no-repeat;
     background-size: contain;
     border-radius: 6px;
-    transition: all .2s;
+    transition: all 0.2s;
 
-    &:hover{
+    &:hover {
       transform: scale(1.05);
     }
   }
 
-  &-arrows{
+  &-arrows {
     height: 16px;
     width: 16px;
     display: block;
@@ -174,7 +173,7 @@
     border-radius: 6px;
   }
 
-  &-star{
+  &-star {
     height: 16px;
     width: 16px;
     display: block;
@@ -183,12 +182,12 @@
     background-repeat: no-repeat;
     background-size: contain;
 
-    &--empty{
+    &--empty {
       background-image: url(../img/sprite/star-emty.svg);
     }
   }
 
-  &-dmca{
+  &-dmca {
     display: block;
     background-image: url(../img/index/dmca.png);
     width: 100px;
@@ -198,7 +197,7 @@
     background-repeat: no-repeat;
   }
 
-  &-ecogra{
+  &-ecogra {
     display: block;
     background-image: url(../img/index/ecogra.png);
     width: 98px;
@@ -208,7 +207,7 @@
     background-repeat: no-repeat;
   }
 
-  &-gamble{
+  &-gamble {
     display: block;
     background-image: url(../img/sprite/gambleaware.svg);
     width: 156px;
@@ -218,7 +217,7 @@
     background-repeat: no-repeat;
   }
 
-  &-18{
+  &-18 {
     display: block;
     background-image: url(../img/sprite/18plus.svg);
     width: 30px;
@@ -228,6 +227,318 @@
     background-repeat: no-repeat;
   }
 
+  &-slots {
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-image: url(../img/sprite/slots.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
+  &-blackjack {
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-image: url(../img/sprite/blackjack.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 
+  &-poker {
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-image: url(../img/sprite/poker.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-video {
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-image: url(../img/sprite/video-poker.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-roulette {
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-image: url(../img/sprite/roulette.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-craps {
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-image: url(../img/sprite/craps.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-dealer {
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-image: url(../img/sprite/dealer.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-pros {
+    transform: scaleY(-1);
+    height: 24px;
+    width: 24px;
+    display: block;
+    background-image: url(../img/sprite/thumb_down.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-i {
+    height: 14px;
+    width: 14px;
+    display: block;
+    background-image: url(../img/sprite/i.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-check {
+    height: clamp(24px, 2.963vw, 32px);
+    width: clamp(24px, 2.963vw, 32px);
+    display: block;
+    background-image: url(../img/sprite/check.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-bet {
+    height: 24px;
+    width: 24px;
+    display: block;
+    background-image: url(../img/sprite/bingo.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-bingo {
+    height: 24px;
+    width: 24px;
+    display: block;
+    background-image: url(../img/sprite/bet.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-slot {
+    height: 24px;
+    width: 24px;
+    display: block;
+    background-image: url(../img/sprite/slot.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-ua {
+    height: 22px;
+    width: 30px;
+    display: block;
+    background-image: url(../img/sprite/ua.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-marker {
+    height: 16px;
+    width: 18px;
+    display: block;
+    background-image: url(../img/sprite/marker.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-inform {
+    height: 20px;
+    width: 20px;
+    display: block;
+    background-image: url(../img/sprite/inform.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-close {
+    height: 20px;
+    width: 20px;
+    display: block;
+    background-image: url(../img/sprite/close.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-top {
+    height: 17px;
+    width: 16px;
+    display: block;
+    background-image: url(../img/sprite/top.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-lcasino {
+    height: 24px;
+    width: 24px;
+    display: block;
+    background-image: url(../img/sprite/lcasino.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-cons {
+    height: 24px;
+    width: 24px;
+    display: block;
+    background-image: url(../img/sprite/thumb_down2.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-baccarat {
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-image: url(../img/sprite/bacarrat.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-pay {
+    display: block;
+    background-image: url(../img/index/paysafecard.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 8px;
+    border-radius: 4px;
+    max-width: 96px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-bitcoin {
+    display: block;
+    background-image: url(../img/index/bitcoin.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 8px;
+    border-radius: 4px;
+    max-width: 96px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-neo {
+    display: block;
+    background-image: url(../img/index/neo.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 8px;
+    border-radius: 4px;
+    max-width: 96px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-ezee {
+    display: block;
+    background-image: url(../img/index/ethereum.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 8px;
+    border-radius: 4px;
+    max-width: 96px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-master {
+    display: block;
+    background-image: url(../img/index/mastercard.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 8px;
+    border-radius: 4px;
+    max-width: 96px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-bank {
+    display: block;
+    background-image: url(../img/index/banktransfer.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 8px;
+    border-radius: 4px;
+    max-width: 96px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-pragmatic {
+    display: block;
+    background-image: url(../img/index/pragmaticplay.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 8px;
+    border-radius: 4px;
+    max-width: 96px;
+    width: 100%;
+    height: 100%;
+  }
+
+  &-betsoft {
+    display: block;
+    background-image: url(../img/index/betsoft.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 8px;
+    border-radius: 4px;
+    max-width: 96px;
+    width: 100%;
+    height: 100%;
+  }
 }

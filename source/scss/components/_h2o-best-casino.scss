@@ -1,0 +1,64 @@
+.h2o-best-casino{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--br-g);
+
+    &__row{
+        padding: 8px;
+        display: grid;
+        grid-template-columns: .3fr .7fr;
+        border-top: 1px solid var(--br-g);
+        grid-gap: 5px;
+    }
+
+    &__top{
+        padding: 8px;
+        grid-gap: 5px;
+        display: grid;
+        grid-template-columns: .3fr .7fr;
+        background-color: rgba(var(--bg-o),1.0);
+    }
+
+    &__title{
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-weight: 700;
+        color: rgba(var(--cl-h),1.0);
+        padding-right: 5px;
+    }
+
+    &__name{
+        display: flex;
+        grid-gap: 5px;
+        font-family: var(--font-family);
+        font-size: 14px;
+        font-weight: 700;
+        color: rgba(var(--cl-h),1.0);
+        position: relative;
+        width: 100%;
+        padding-right: 5px;
+        padding-top: 2px;
+
+        i{
+            @include for-ios{
+                margin-top: -4px;
+            }
+        }
+
+        @include ios{
+            flex-direction: column;
+        }
+
+        &::before{
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 0;
+            width: 1px;
+            height: calc(100% + 16px);
+            border-right: solid 1px var(--br-g);
+        }
+    }
+}

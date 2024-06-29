@@ -6,9 +6,9 @@ const burgers = document.querySelectorAll(".h2o-burger");
 const accParrent = [...document.querySelectorAll("[data-accordion-init]")];
 const htmlEl = document.documentElement;
 const bodyEl = document.body;
-
-
 const slotsSliders = document.querySelectorAll('.h2o-slots-slider');
+const infoSliders = document.querySelectorAll('.h2o-info-slider');
+const paySliders = document.querySelectorAll('.h2o-pay-slider');
 //------------------------------------------------
 
 //----customFunction------------------------------
@@ -301,7 +301,6 @@ elementHeight(header, "header-height");
  });
 //---------------------------------------------------
 slotsSliders && slotsSliders.forEach(function(slotsSlider){
-
   new Splide( slotsSlider, {
     type       : 'loop',
     speed      : 1800,
@@ -322,16 +321,69 @@ slotsSliders && slotsSliders.forEach(function(slotsSlider){
   } ).mount(); 
 });
 
+infoSliders && infoSliders.forEach(function(infoSlider){
+  const slider = infoSlider.querySelector('.splide');
+
+  var splide = new Splide( slider, {
+    type       : 'loop',
+    speed      : 1000,
+    pagination : false,
+    arrows     : false, 
+    perPage    : 2,
+    gap        : 20,
+    interval   : 2500,
+    breakpoints: {
+      1024: {
+        perPage: 2,
+      },
+      768: {
+        perPage: 1,
+      },
+    },
+  } ).mount(); 
+
+  var totalSlides = splide.Components.Elements.slides.length;
+  document.getElementById('totalSlides').textContent = totalSlides;
+
+  splide.on('move', function (newIndex) {
+    document.getElementById('currentSlide').textContent = newIndex + 1;
+  });
+
+  document.getElementById('prevSlide').addEventListener('click', function () {
+    splide.go('-1');
+  });
+
+  document.getElementById('nextSlide').addEventListener('click', function () {
+    splide.go('+1');
+  });
+
+
+
+});
+
+paySliders && paySliders.forEach(function(paySlider){
+  new Splide( paySlider, {
+    type       : 'loop',
+    speed      : 1800,
+    pagination : false,
+    arrows     : true,
+    perPage    : 3,
+    gap        : 10,
+    // autoplay   : true,
+    interval   : 5000,
+  } ).mount(); 
+});
 //-----------------------------------------------------
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.h2o-rating-card');
-  
+  const reviewCards = document.querySelectorAll('.h2o-rewiev-card');
+
   cards && cards.forEach(function(card) {
     const toggleButton = card.querySelector('.h2o-rating-card__toggle');
     const details = card.querySelector('.h2o-rating-card__details');
     const content = card.querySelector('.h2o-rating-card__content');
-
-    toggleButton.addEventListener('click', function() {
+  
+    toggleButton && toggleButton.addEventListener('click', function() {
       if (details.style.height && details.style.height !== '0px') {
         details.style.height = '0';
         removeCustomClass(toggleButton, 'rotate');
@@ -343,4 +395,36 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  reviewCards && reviewCards.forEach(function(card){
+    const front = card.querySelector('.h2o-rewiev-card__front');
+    const back = card.querySelector('.h2o-rewiev-card__back')
+    const btns = card.querySelectorAll('.h2o-rewiev-card__info');
+
+    btns.forEach(function(btn){
+      btn.addEventListener('click', function(e){
+        e.preventDefault();
+        toggleCustomClass(front, 'active');
+        toggleCustomClass(back, 'active');
+      })
+    })
+  })
 });
+
+//-----------------------------------------------------
+const navLinks = document.querySelectorAll('.h2o-nav a');
+
+if (navLinks.length > 0) {
+    navLinks.forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const targetElement = document.querySelector(this.getAttribute('href'));
+            if (targetElement) {
+                targetElement.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+}

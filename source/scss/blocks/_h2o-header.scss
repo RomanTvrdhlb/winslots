@@ -5,6 +5,10 @@
   top: 0;
   z-index: 80;
   
+  &.mode{
+    background: var(--gr-b);
+    padding: 1px 0 10px;
+  }
 
   &__box {
     

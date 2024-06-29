@@ -7,9 +7,7 @@
         flex-direction: column;
         grid-gap: clamp(18px, 2.2222vw, 24px);
 
-        @include for-tablet{
-            padding: 0 18px;
-        }
+      
     }
 
     &__inner{

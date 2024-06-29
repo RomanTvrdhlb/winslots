@@ -1,0 +1,12 @@
+.h2o-demo-list{
+    display: grid;
+    grid-gap: 10px;
+
+    @include for-tablet{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    @include tablet{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

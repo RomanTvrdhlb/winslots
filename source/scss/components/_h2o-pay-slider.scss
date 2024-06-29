@@ -1,0 +1,41 @@
+.h2o-pay-slider{
+    width: 130px;
+    padding-right: 25px;
+
+    &__slide{
+        width: 35px;
+        height: 20px;
+        display: flex;
+        border-radius: 3px;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            height: auto;
+        }
+    }
+
+
+    .splide__arrow{
+        background: rgba(0, 78, 210, 0.7);
+        border-radius: 4px;
+        width: 20px;
+        height: 20px;
+
+        svg{
+            fill: rgba(var(--cl-a),1.0);
+            width: 10px;
+            height: 10px;
+        }
+
+        &--prev{
+            left: -5px;
+            transform: translate(-100%, -50%);
+        }
+
+        &--next{
+            right: 0;
+            transform: translate(0%, -50%);
+        }
+    }
+}

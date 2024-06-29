@@ -1,0 +1,10 @@
+.h2o-casino-list{
+    display: flex;
+    flex-direction: column;
+    grid-gap: clamp(15px, 1.8519vw, 20px);
+    counter-reset: li;
+
+    &__item{
+        counter-increment: li;
+    }
+}

@@ -1,0 +1,55 @@
+.h2o-nav{
+    display: flex;
+    align-items: center;
+
+    @include tablet{
+        width: calc(100% + 40px);
+        margin-left: -20px;
+    }
+   
+    &__list{
+        display: flex;
+        align-items: center;
+        grid-gap: 8px 10px;
+        flex-wrap: wrap;
+        padding: 3px 0;
+
+        @include tablet{
+            padding:3px 20px;
+            width: 100%;
+            overflow-x: auto;
+            flex-wrap: nowrap;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+          }
+    }
+
+    &__link{
+        font-family: var(--font-family);
+        padding: clamp(6px, .9259vw, 10px) 10px;
+        border-radius: 10px;
+        background: rgba(var(--bg-c),1.0);
+        color: rgba(var(--cl-b),1.0);
+        font-size: clamp(14px, 1.4815vw, 16px);
+        font-weight: 700;
+        text-transform: uppercase;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all .1s;
+        box-shadow: 0 -3px #d5aa00 inset;
+        position: relative;
+
+        &:hover{
+            top: 1px;
+            box-shadow: 0 -2px #d5aa00 inset;
+        }
+
+        @include tablet{
+            white-space: nowrap;
+        }
+    }
+}

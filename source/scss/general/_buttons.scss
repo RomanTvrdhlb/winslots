@@ -1,129 +1,181 @@
 .h2o-main-btn {
-    color: rgba(var(--cl-a), 1);
-    font-family: var(--font-family);
-    background-color: rgba(var(--bg-e),1.0);
-    width: 180px;
-    padding: 2px 0;
-    font-weight: 700;
-    margin-bottom: 5px;
-    font-size: 14px;
-    color: rgba(var(--cl-c),1.0);
-    text-transform: uppercase;
-    box-shadow: 0 -3px #d5aa00 inset;
-    text-align: center;
-    line-height: 2.3;
-    border-radius: 5px;
-    transition: all .3s ease-in-out;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
+  color: rgba(var(--cl-a), 1);
+  font-family: var(--font-family);
+  background-color: rgba(var(--bg-e), 1);
+  width: 180px;
+  padding: 2px 0;
+  font-weight: 700;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: rgba(var(--cl-c), 1);
+  text-transform: uppercase;
+  box-shadow: 0 -3px #d5aa00 inset;
+  text-align: center;
+  line-height: 2.3;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 
-    .h2o-icon-play{
-      position: absolute;
-      left: 10px;
-      top: 4px;
-      transition: all .3s ease-in-out;
-    }
+  .h2o-icon-play {
+    position: absolute;
+    left: 10px;
+    top: 4px;
+    transition: all 0.3s ease-in-out;
+  }
 
-    &:hover {
-    background: rgba(var(--bg-f),1.0);
+  &:hover {
+    background: rgba(var(--bg-f), 1);
 
-    .h2o-icon-play{
+    .h2o-icon-play {
       left: 15px;
     }
+  }
+
+  &--green {
+    background: rgba(var(--bg-l), 1);
+    color: rgba(var(--cl-b), 0.6);
+    box-shadow: 0 -3px #016a27 inset;
+
+    &:hover {
+      background: rgba(var(--bg-l), 0.85);
+    }
+  }
+
+  &--transparent {
+    background: rgba(var(--bg-b), 0.4);
+    color: rgba(var(--cl-a), 1);
+    box-shadow: none;
+    border: solid 1px var(--br-b);
+
+    &:hover {
+      background: rgba(var(--bg-l), 0.85);
+    }
+  }
+
+  &--white{
+    background: transparent;
+    box-shadow: none;
+    color: #192c5d;
+    border: solid 2px #192c5d;
+
+    &:hover {
+      color: #fff;
+      background: #192c5d;
     }
 
-    &--green{
-      background: rgba(var(--bg-l),1.0);
-      color: rgba(var(--cl-b), .6);
-      box-shadow: 0 -3px #016a27 inset;
-
-      &:hover{
-        background: rgba(var(--bg-l),.85);
-      }
+    &:disabled{
+      opacity: .2;
+      pointer-events: none;
     }
-}
-
-.h2o-bonus-btn{
-    color: rgba(var(--cl-d),1.0);
-    background: rgba(var(--bg-g),1.0);
-    box-shadow: 0 -2px #592a2f inset;
-    width: 60px;
-    height: 45px;
-    padding: 4px 0px 7px 0px;
-    margin: 0 5px;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    grid-gap: 4px;
-    justify-content: flex-end;
-    text-transform: uppercase;
-    text-decoration: none; 
-    line-height: 1.4;
-    font-size: 8px;
-    font-weight: 500;
-    border-radius: 5px;
-    transition: all .3s ease-in-out;
-
-    &:hover{
-      background: #ca7318;
-    }
-
-    &--green{
-      color: rgba(var(--cl-e),1.0);
-      background: rgba(var(--bg-j),1.0);
-      box-shadow: 0 -2px #175f32 inset;
-      &:hover{
-        background: #267f47;
-      }
-    }
-
-    &--blue{
-      color: rgba(var(--cl-f),1.0);
-      background: rgba(var(--bg-h),1.0);
-      box-shadow: 0 -2px #244d7a inset;
-
-      &:hover{
-        background: #326398;
-      }
   }
 }
 
+.h2o-info-btn {
+  display: flex;
+  align-items: center;
+  grid-gap: 5px;
+  text-align: center;
+  color: rgba(var(--cl-k), 1);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 500;
+  transition: all 0.3s;
+  i {
+    transition: all 0.3s;
+    margin-bottom: -2px;
+  }
 
+  &:hover {
+    color: rgba(var(--cl-b), 1);
+    i {
+      transform: scale(1.1);
+    }
+  }
+}
 
-.h2o-games-btn{
+.h2o-bonus-btn {
+  color: rgba(var(--cl-d), 1);
+  background: rgba(var(--bg-g), 1);
+  box-shadow: 0 -2px #592a2f inset;
+  width: 60px;
+  height: 45px;
+  padding: 4px 0px 7px 0px;
+  margin: 0 5px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  grid-gap: 4px;
+  justify-content: flex-end;
+  text-transform: uppercase;
+  text-decoration: none;
+  line-height: 1.4;
+  font-size: 8px;
+  font-weight: 500;
+  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    background: #ca7318;
+  }
+
+  &--green {
+    color: rgba(var(--cl-e), 1);
+    background: rgba(var(--bg-j), 1);
+    box-shadow: 0 -2px #175f32 inset;
+    &:hover {
+      background: #267f47;
+    }
+  }
+
+  &--blue {
+    color: rgba(var(--cl-f), 1);
+    background: rgba(var(--bg-h), 1);
+    box-shadow: 0 -2px #244d7a inset;
+
+    &:hover {
+      background: #326398;
+    }
+  }
+}
+
+.h2o-games-btn {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   min-height: clamp(35px, 3.69vw, 50px);
-    padding: 5px 20px;
-    background: rgba(var(--bg-c),1.0);
-    border-radius: 50px;
-    color: rgba(var(--cl-c),1.0);
-    font-size: 20px;
-    font-weight: 700;
+  padding: 5px 20px;
+  background: rgba(var(--bg-c), 1);
+  border-radius: 50px;
+  color: rgba(var(--cl-c), 1);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: all 0.4s;
+  width: fit-content;
+
+  &:hover {
+    background: rgba(var(--bg-d), 1);
+    color: rgba(var(--cl-f), 1);
+  }
+
+  &__label {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    padding: 5px 10px;
+    background: rgba(var(--bg-e), 1);
+    border-radius: 20px;
+    color: rgba(var(--cl-a), 1);
+    font-size: 10px;
+    font-weight: 400;
     letter-spacing: 1px;
-    transition: all .4s;
-    width: fit-content;
-
-    &:hover{
-      background: rgba(var(--bg-d),1.0);
-      color: rgba(var(--cl-f),1.0);
-    }
-
-    &__label{
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      padding: 5px 10px;
-      background: rgba(var(--bg-e),1.0);
-      border-radius: 20px;
-      color:  rgba(var(--cl-a),1.0);
-      font-size: 10px;
-      font-weight: 400;
-      letter-spacing: 1px;
-    }
+  }
 }

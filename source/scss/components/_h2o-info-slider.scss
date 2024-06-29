@@ -1,0 +1,139 @@
+.h2o-info-slider{
+    position: relative;
+
+    @include for-mobile{
+        padding-left: 85px;
+    }
+
+    @include mobile{
+        padding-bottom: 50px;
+    }
+
+    &__slide{
+        background-color: rgba(27,10,127,.04);
+        border-radius: 12px;
+        overflow: hidden;
+
+        padding: clamp(15px, 1.8519vw, 20px) clamp(15px, 1.8519vw, 20px) 20px;
+
+        p{
+            line-height: 135%;
+        }
+    }
+
+    &__box{
+        display: flex;
+        flex-direction: column;
+        grid-gap: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    &__image{
+        margin: calc(clamp(15px, 1.8519vw, 20px) * -1) calc(clamp(15px, 1.8519vw, 20px) * -1) 0; 
+        width: calc(100% + (clamp(15px, 1.8519vw, 20px) * 2));
+        height: clamp(210px, 22.2222vw, 240px);
+
+        img,picture{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__title{
+        display: flex;
+        font-size: clamp(18px, 2.037vw, 22px);
+        font-family: var(--font-family);
+        font-weight: 700;
+        color: rgba(var(--cl-k),1.0);
+    }
+
+    &__label{
+        position: absolute;
+        display: inline-block;
+        background-color: rgba(var(--bg-a),1.0);
+        top: 0;
+        left: 0;
+        border-radius: 6px;
+        padding: 9px 10px;
+        font-weight: 600;
+        color: rgba(var(--cl-b),1.0);
+        line-height: 1;
+        z-index: 5;
+    }
+
+    &__btn{
+        font-size: 28px;
+        line-height: 1;
+        color: rgba(var(--cl-q),1.0);
+        transition: all .3s;
+        position: absolute;
+        display: block;
+        height: 41px;
+        padding:3px 5px 9px;
+        cursor: pointer;
+        background: rgba(27, 10, 127, .04);
+        text-align: center;
+        border-radius: 4px;
+        
+
+        &:hover{
+            opacity: .8;
+            color: rgba(var(--cl-a),1.0);
+            background: rgba(var(--bg-l),1.0);
+        }
+
+        @include for-mobile{
+            width: 72px;
+            top: 78px;
+            left: 0;
+        }
+
+        @include mobile{
+            right: 0;
+            bottom: 0;
+            width: 85px;
+        }
+    }
+
+    #prevSlide{
+        
+        @include for-mobile{
+            top: 30px;
+        }
+
+        @include mobile{
+            left: 0;
+            right: initial;
+        }
+    }
+    
+    .h2o-pagination{
+        position: absolute;
+        z-index: 5;
+
+        @include for-mobile{
+            top: 0;
+            left: 0;
+            transform: translateX(50%);
+        }
+
+        @include mobile{
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+.h2o-pagination{
+        font-size: clamp(16px, 1.8519vw, 20px);
+        font-family: var(--font-family);
+        font-weight: 500;
+        color: rgba(var(--cl-k),1.0);
+   
+        #currentSlide{
+            font-size: clamp(20px, 2.2222vw, 24px);
+            font-weight: 700;
+        }
+}
