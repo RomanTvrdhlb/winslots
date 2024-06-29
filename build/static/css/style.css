@@ -165,7 +165,6 @@
   --bc-n: 202, 115, 24;
   --br-a: #24bcae;
   --br-b: #fff;
-  --br-b: #000;
   --br-c: #3e3e3e;
   --br-d: #e6b800;
   --br-e: #dcdcdc;
@@ -1003,6 +1002,9 @@ table:not([class]) th {
 }
 table:not([class]) tr:nth-child(odd):not(thead tr) {
   background: #fafafa;
+}
+table:not([class]) thead {
+  background: #fff;
 }
 table:not([class]) thead tr {
   padding: 10px 10px 0;
@@ -1916,7 +1918,7 @@ blockquote::before {
   box-shadow: 0 -2px #016a27 inset;
 }
 .h2o-main-btn--transparent {
-  background: rgba(var(--bg-b), 0.4);
+  background: rgba(var(--bg-a), 0.4);
   color: rgba(var(--cl-a), 1);
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -3036,6 +3038,11 @@ blockquote::before {
   rotate: -45deg;
   top: 8px;
   left: 10px;
+}
+@media (max-width: 576px) {
+  .h2o-rating-card__toggle {
+    bottom: -16px;
+  }
 }
 .h2o-rating-card__content {
   display: -webkit-box;
@@ -4265,7 +4272,7 @@ blockquote::before {
 }
 
 .h2o-pay-slider {
-  width: 130px;
+  width: 135px;
   padding-right: 25px;
 }
 .h2o-pay-slider__slide {
@@ -4278,7 +4285,8 @@ blockquote::before {
   overflow: hidden;
 }
 .h2o-pay-slider__slide img {
-  width: 100%;
+  border-radius: 3px;
+  width: 30px;
   height: auto;
 }
 .h2o-pay-slider .splide__arrow {
@@ -6603,6 +6611,11 @@ blockquote::before {
   font-size: 14px;
   letter-spacing: normal;
   line-height: 18px;
+}
+@media (max-width: 767px) {
+  .h2o-best-card__feedback {
+    margin-top: 10px;
+  }
 }
 .h2o-best-card__medal {
   background: rgba(var(--bc-e), 1);

@@ -115,6 +115,10 @@
     display: grid;
     grid-gap: 8px;
     grid-template-columns: repeat(2, 1fr) auto;
+
+    @include small-tablet{
+      margin-top: 10px;
+    }
   }
 
   &__medal {

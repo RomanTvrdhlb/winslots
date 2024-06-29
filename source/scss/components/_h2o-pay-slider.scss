@@ -1,5 +1,5 @@
 .h2o-pay-slider{
-    width: 130px;
+    width: 135px;
     padding-right: 25px;
 
     &__slide{
@@ -10,7 +10,8 @@
         overflow: hidden;
 
         img{
-            width: 100%;
+            border-radius: 3px;
+            width: 30px;
             height: auto;
         }
     }

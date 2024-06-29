@@ -133,6 +133,10 @@
       top: 8px;
       left: 10px;
     }
+
+    @include mobile{
+      bottom: -16px;
+    }
   }
 
   &__content {
