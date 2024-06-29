@@ -13,6 +13,7 @@
     padding: 15px 20px 15px;
     z-index: 30;
     padding-top: 32%;
+    background: rgba(var(--cl-b),.8);
    
     &.active {
         transform: translateX(0);
@@ -29,10 +30,9 @@
         }
 
         &__link{
-            padding: 20px 15px;
+            padding: 15px 0;
             justify-content: center;
-            min-width: 240px;
-            font-size: 22px;
+            font-size: 18px;
             border-radius: 0;
         }
     }

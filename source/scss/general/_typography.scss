@@ -54,10 +54,10 @@ ol:not([class]){
     &::before{
       position: absolute;
       left: 0;
-      top: -4.5px;
+      top: 3px;
       content: counters(li, '') '.';
       counter-increment: li;
-      font-size: clamp(15px, 1.2546vw, 17px);
+      font-size: clamp(15px, 1.5741vw, 17px);
       font-family: var(--font-family);
       font-weight: 700;
       color: rgba(var(--cl-b),1.0);
@@ -71,7 +71,7 @@ ul:not([class]) {
   grid-gap: 10px;
   background: #fff;
   position: relative;
-  padding: 15px 30px;
+  padding: 15px 20px;
   box-shadow: 0 0 18px rgb(0 0 0 / 10%);
   border-radius: 10px;
 

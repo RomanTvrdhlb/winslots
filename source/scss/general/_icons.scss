@@ -541,4 +541,180 @@
     width: 100%;
     height: 100%;
   }
+
+  &-cancel {
+    height: 11px;
+    width: 12px;
+    display: block;
+    background-image: url(../img/sprite/cancel.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-cup {
+    height: 16px;
+    width: 16px;
+    display: block;
+    background-image: url(../img/sprite/cup.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-marker2 {
+    height: 16px;
+    width: 16px;
+    display: block;
+    background-image: url(../img/sprite/marker2.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-pros2 {
+    height: 16px;
+    width: 16px;
+    display: block;
+    background-image: url(../img/sprite/pros2.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-cons2 {
+    height: 16px;
+    width: 16px;
+    display: block;
+    background-image: url(../img/sprite/cons2.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-user {
+    height: 18px;
+    width: 18px;
+    display: block;
+    background-image: url(../img/sprite/cup.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-planet {
+    height: 14px;
+    width: 14px;
+    display: block;
+    background-image: url(../img/sprite/planet.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+
+  &-curacao {
+    height: 19px;
+    width: 22px;
+    display: block;
+    background-image: url(../img/index/cw.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &-money {
+    
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ecf5ee;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    display: flex;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+
+    &::before{
+      z-index: 2;
+      width: 14px;
+      height: 11px;
+      position: absolute;
+      content: '';
+      background-image: url(../img/sprite/money.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &-tag {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ecf5ee;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    display: flex;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+
+    &::before{
+      z-index: 2;
+      width: 14px;
+      height: 11px;
+      position: absolute;
+      content: '';
+      background-image: url(../img/sprite/pros2.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+  
+  &-fire2 {
+    height: 24px;
+    width: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffeeea;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    display: flex;
+    padding: 5px;
+    position: relative;
+    z-index: 1;
+
+    &::before{
+      z-index: 2;
+      width: 14px;
+      height: 11px;
+      position: absolute;
+      content: '';
+      background-image: url(../img/sprite/fire2.svg);
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  &-arrow {
+    height: 14px;
+    width: 14px;
+    display: block;
+    background-image: url(../img/sprite/arrow.svg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
 }

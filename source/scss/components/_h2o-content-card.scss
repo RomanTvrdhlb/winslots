@@ -1,0 +1,108 @@
+.h2o-content-card{
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 15px;
+    position: relative;
+    z-index: 1;
+    transition: all .3s;
+    height: 100%;
+
+    &:hover{
+box-shadow: 0 0 13px rgba(0, 0, 0, 0.25);
+    }
+
+    &__btn{
+        position: absolute;
+        inset: 0;
+        z-index: 3;
+        border-radius: inherit;
+    }
+
+    &__image{
+        margin: 10px 0;
+        width: 100%;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img{
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+    }
+
+    &__title{
+        font-weight: 700;
+        font-size: clamp(16px, 1.6667vw, 18px);
+        line-height: 24px;
+        display: inline-flex;
+        font-family: var(--font-family);
+        text-align: center;
+        align-self: center;
+    }
+
+    &__box{
+        background-color: rgba(var(--cl-v), 1);
+       display: flex;
+       flex-direction: column;
+        grid-gap: 10px;
+        border-radius: 12px;
+        flex-grow: 1;
+    }
+
+    &__list{
+        padding: 0 10px 20px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 15px 10px;
+
+        .h2o-icon-check{
+            width: 12px;
+            height: 12px;
+        }
+
+        @include mobile{
+           justify-items: center;
+        }
+    }
+
+    &__text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+
+        b{
+            font-size: 14px;
+        }
+    }
+
+    &__info{
+        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px 10px 10px;
+    }
+
+    &__icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 90px;
+        width: 100%;
+        height: auto;
+        justify-self: center;
+    }
+
+    &__item{
+        display: inline-flex;
+        grid-gap: 5px;
+        align-items: center;
+        font-size: 14px;
+    }
+}

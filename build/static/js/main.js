@@ -305,7 +305,7 @@ slotsSliders && slotsSliders.forEach(function(slotsSlider){
     type       : 'loop',
     speed      : 1800,
     pagination : true,
-    arrows     : false,
+    arrows     : true,
     perPage    : 3,
     gap        : 20,
     autoplay   : true,
@@ -369,7 +369,7 @@ paySliders && paySliders.forEach(function(paySlider){
     arrows     : true,
     perPage    : 3,
     gap        : 10,
-    // autoplay   : true,
+    autoplay   : true,
     interval   : 5000,
   } ).mount(); 
 });
@@ -377,6 +377,7 @@ paySliders && paySliders.forEach(function(paySlider){
 document.addEventListener('DOMContentLoaded', function() {
   const cards = document.querySelectorAll('.h2o-rating-card');
   const reviewCards = document.querySelectorAll('.h2o-rewiev-card');
+  const bestCards = document.querySelectorAll('.h2o-best-card');
 
   cards && cards.forEach(function(card) {
     const toggleButton = card.querySelector('.h2o-rating-card__toggle');
@@ -409,6 +410,30 @@ document.addEventListener('DOMContentLoaded', function() {
       })
     })
   })
+
+  bestCards && bestCards.forEach(card => {
+    const toggleBlock = card.querySelector('.h2o-best-card__hide');
+    const toggleButton = card.querySelector('.h2o-best-card__show-btn');
+
+    toggleButton.addEventListener('click', function() {
+        if (toggleBlock.classList.contains('open')) {
+            toggleBlock.style.height = toggleBlock.scrollHeight + 'px';
+            toggleBlock.offsetHeight; 
+            toggleBlock.style.height = '0';
+            setTimeout(() => {
+                removeCustomClass(toggleBlock, 'open');
+            }, 500);
+            removeCustomClass(toggleButton, 'open');
+        } else {
+            toggleBlock.style.height = toggleBlock.scrollHeight + 'px';
+            addCustomClass(toggleBlock, 'open');
+            setTimeout(() => {
+                toggleBlock.style.height = 'auto';
+            }, 500);
+            addCustomClass(toggleButton, 'open');
+        }
+    });
+});
 });
 
 //-----------------------------------------------------

@@ -50,7 +50,7 @@
     }
 
     &__title{
-        color: #fff;
+        color: rgba(var(--cl-a),1.0);
         font-size: 18px;
         font-weight: 600;
         width: 100%;
@@ -58,8 +58,20 @@
         text-transform: uppercase;
     }
 
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 9px;
+
+        .h2o-icon-star{
+            width: 22px;
+            height: 22px;
+        }
+    }
+
     p{
-        color: #747474;
+        color: rgba(var(--cl-y),.8);
         font-size: 14px;
     }
 }

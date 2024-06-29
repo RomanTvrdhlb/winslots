@@ -27,7 +27,6 @@
 
   &__box {
     overflow: hidden;
-    padding: 10px 0 15px;
     background: rgba(var(--bg-a), 1);
     border-top: 4px solid rgba(var(--bg-c), 1);
     border-bottom: 3px solid rgba(var(--cl-g), 1);
@@ -38,6 +37,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @include for-mobile{
+      padding: 10px 0 15px;
+    }
+
+    @include mobile{
+      padding: 10px 5px 15px;
+    }
   }
 
   &__title {

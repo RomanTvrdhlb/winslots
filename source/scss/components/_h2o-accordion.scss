@@ -19,12 +19,11 @@
         border-radius: 16px;
         border: 0;
         text-decoration: none !important;
-        padding: 13px clamp(20px, 3.7037vw, 40px);
+        padding: 13px clamp(20px, 2.7778vw, 30px);
   
         &.active{
             .h2o-accordion__icon{
                 rotate: 180deg;
-                top: 0;
             }
             border-radius: 16px 16px 0 0;
         }
@@ -39,7 +38,7 @@
     &__icon{
         transition: all ease .3s;
         position: relative;
-        top: -2px;
+        top: 0px;
         z-index: 1;
         background-color: rgba(var(--bg-c),1.0);
         width: 30px;
